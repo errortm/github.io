@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纳瓦尔·拉维坎特 - 智慧名言</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f7; /* Apple-like light gray background */
+            color: #1d1d1f; /* Apple's primary text color */
+        }
+        .guide-content {
+            font-family: 'Noto Serif SC', serif;
+        }
+        .nav-link {
+            @apply px-3 py-2 text-sm font-medium text-gray-700 hover:text-black rounded-md transition-colors duration-150;
+        }
+        .nav-link-active {
+            @apply px-3 py-2 text-sm font-medium text-black rounded-md;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105;
+        }
+        .card-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 2 / 3; /* Maintain a consistent aspect ratio for the images */
+            object-fit: cover; /* Ensure images cover the area without distortion */
+        }
+        .hero-section {
+            background-color: #000; /* Dark hero for contrast, common in Apple design */
+            color: #fff;
+        }
+        .footer {
+            background-color: #e9e9eb; /* Lighter gray for footer */
+        }
+
+        /* Glassmorphism effect for the navbar */
+        .navbar-glass {
+            background: rgba(245, 245, 247, 0.7); /* Semi-transparent background */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        .logo-image {
+            height: 48px; /* 从32px增加到48px */
+            width: auto;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="navbar-glass sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <img class="logo-image" src="素材/logo-web.png" alt="网站Logo"
+                             onerror="this.onerror=null; this.alt='Logo 加载失败'; this.src='素材/logo-x.png';">
+                        <!-- Make sure '20250514_1634_深度折叠内容提炼_remix_01jv6yt8smf1rtf6mgw7g77w49.jpg' is the correct path to your logo file.
+                             If it's in an 'images' folder, use 'images/your-logo-filename.jpg'. -->
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#hero" class="nav-link-active">首页</a>
+                            <a href="#gallery" class="nav-link">名言集</a>
+                            <a href="#guide" class="nav-link">行动指南</a>
+                            <a href="#about" class="nav-link">关于纳瓦尔</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                     <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-150">
+                        了解更多
+                    </button>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">打开主菜单</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#hero" class="block nav-link-active text-center">首页</a>
+                <a href="#gallery" class="block nav-link text-center">名言集</a>
+                <a href="#guide" class="block nav-link text-center">行动指南</a>
+                <a href="#about" class="block nav-link text-center">关于纳瓦尔</a>
+            </div>
+            <div class="pt-4 pb-3 border-t border-gray-700">
+                <div class="flex items-center justify-center px-5">
+                     <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-150">
+                        了解更多
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section py-20 md:py-32">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight">
+                纳瓦尔·拉维坎特的智慧
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+                探索关于财富、自由、时间与生命意义的深刻见解。
+            </p>
+            <div class="mt-10">
+                <a href="#gallery" class="inline-block bg-white text-black font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-150 text-lg">
+                    浏览名言
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">精选名言集</h2>
+                <p class="mt-4 text-lg text-gray-600">来自纳瓦尔·拉维坎特的智慧箴言。</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <script>
+                    const quotes = [
+                        { img: '素材/Naval Quote Card 1 - Wealth.png', alt: '关于财富的名言', title: '财富的定义' },
+                        { img: '素材/Naval Quote Card 2 - Freedom.png', alt: '关于自由的名言', title: '真正的自由' },
+                        { img: '素材/Naval Quote Card 3 - Time.png', alt: '关于时间的名言', title: '时间的价值' },
+                        { img: '素材/Naval Quote Card 4 - Focus.png', alt: '关于专注的名言', title: '专注的力量' },
+                        { img: '素材/Naval Quote Card 5 - Competition.png', alt: '关于竞争的名言', title: '逃离竞争' },
+                        { img: '素材/Naval Quote Card 6 - Reading.png', alt: '关于阅读的名言', title: '阅读的智慧' },
+                        { img: '素材/Naval Quote Card 7 - Patience.png', alt: '关于耐心的名言', title: '耐心与成功' },
+                        { img: '素材/Naval Quote Card 8 - Wisdom.png', alt: '关于智慧的名言', title: '智慧的真谛' },
+                        { img: '素材/Naval Quote Card 9 - Peace.png', alt: '关于平静的名言', title: '内心的平静' },
+                        { img: '素材/Naval Quote Card 10 - Life.png', alt: '关于生命的名言', title: '生命的游戏' }
+                    ];
+
+                    const gallery = document.querySelector('#gallery .grid');
+                    const imageBaseUrl = './'; // Assuming images are in the same directory
+
+                    quotes.forEach(quote => {
+                        const cardDiv = document.createElement('div');
+                        cardDiv.className = 'card flex flex-col items-center';
+
+                        const imgElement = document.createElement('img');
+                        // IMPORTANT: Ensure image paths are correct.
+                        // Example: 'images/Naval Quote Card 1 - Wealth.jpg' if in an 'images' folder.
+                        imgElement.src = imageBaseUrl + quote.img;
+                        imgElement.alt = quote.alt;
+                        imgElement.className = 'card-image';
+                        imgElement.onerror = function() {
+                            this.onerror=null;
+                            this.src='https://placehold.co/400x600/e2e8f0/cbd5e0?text=' + encodeURIComponent(quote.title);
+                            this.alt = '图片加载失败: ' + quote.alt;
+                        };
+
+                        const titleElement = document.createElement('h3');
+                        titleElement.className = 'text-lg font-semibold mt-4 mb-2 px-4 text-center';
+                        titleElement.textContent = quote.title;
+
+                        cardDiv.appendChild(imgElement);
+                        cardDiv.appendChild(titleElement);
+                        gallery.appendChild(cardDiv);
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <section id="guide" class="py-20 sm:py-32 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">纳瓦尔行动指南</h2>
+                <p class="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">关于财富与幸福的实践建议，帮助你实现个人成长与财务自由</p>
+            </div>
+            
+            <div class="mt-16 grid gap-8 md:grid-cols-2">
+                <!-- 财富指南 -->
+                <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-1">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold ml-4 text-gray-900 guide-content">财富指南</h3>
+                    </div>
+                    <ul class="space-y-6 guide-content">
+                        <li class="group">
+                            <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="flex items-center mb-4">
+                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                        <span class="text-blue-600 text-sm font-medium">1</span>
+                                    </span>
+                                    <h4 class="text-lg font-semibold text-gray-900">追求特定知识</h4>
+                                </div>
+                                <p class="text-gray-700 pl-12">特定知识是那些无法通过培训获得的知识，它们往往来自于你的独特经历和思考。</p>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="flex items-center mb-4">
+                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                        <span class="text-blue-600 text-sm font-medium">2</span>
+                                    </span>
+                                    <h4 class="text-lg font-semibold text-gray-900">建立和销售产品</h4>
+                                </div>
+                                <p class="text-gray-700 pl-12">产品可以无限复制，而时间不行。通过产品化你的技能，实现被动收入。</p>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="flex items-center mb-4">
+                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                        <span class="text-blue-600 text-sm font-medium">3</span>
+                                    </span>
+                                    <h4 class="text-lg font-semibold text-gray-900">利用杠杆效应</h4>
+                                </div>
+                                <p class="text-gray-700 pl-12">资本、代码和媒体是现代社会的三大杠杆，善用它们可以放大你的影响力。</p>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="flex items-center mb-4">
+                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                        <span class="text-blue-600 text-sm font-medium">4</span>
+                                    </span>
+                                    <h4 class="text-lg font-semibold text-gray-900">学会销售和构建</h4>
+                                </div>
+                                <p class="text-gray-700 pl-12">如果你能同时掌握销售和构建的能力，你将势不可挡，这是最强大的组合。</p>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="flex items-center mb-4">
+                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                        <span class="text-blue-600 text-sm font-medium">5</span>
+                                    </span>
+                                    <h4 class="text-lg font-semibold text-gray-900">投资于自己</h4>
+                                </div>
+                                <p class="text-gray-700 pl-12">最好的投资是投资于自己的技能和知识，它们会带来持续的回报。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 幸福指南 -->
+                <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-1">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold ml-4 text-gray-900 guide-content">幸福指南</h3>
+                    </div>
+                    <ul class="space-y-6 guide-content">
+                        <li class="group">
+                            <div class="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="flex items-center mb-4">
+                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                        <span class="text-green-600 text-sm font-medium">1</span>
+                                    </span>
+                                    <h4 class="text-lg font-semibold text-gray-900">幸福是一种选择</h4>
+                                </div>
+                                <p class="text-gray-700 pl-12">幸福不是结果，而是选择。它来自于内在的平静和满足，而不是外在的条件。</p>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <div class="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="flex items-center mb-4">
+                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                        <span class="text-green-600 text-sm font-medium">2</span>
+                                    </span>
+                                    <h4 class="text-lg font-semibold text-gray-900">学会独处</h4>
+                                </div>
+                                <p class="text-gray-700 pl-12">独处是了解自己、培养内在平静的最佳方式，也是创造力的源泉。</p>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <div class="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="flex items-center mb-4">
+                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                        <span class="text-green-600 text-sm font-medium">3</span>
+                                    </span>
+                                    <h4 class="text-lg font-semibold text-gray-900">保持健康</h4>
+                                </div>
+                                <p class="text-gray-700 pl-12">身体和心理健康是幸福的基础，投资健康就是投资未来。</p>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <div class="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="flex items-center mb-4">
+                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                        <span class="text-green-600 text-sm font-medium">4</span>
+                                    </span>
+                                    <h4 class="text-lg font-semibold text-gray-900">培养深度关系</h4>
+                                </div>
+                                <p class="text-gray-700 pl-12">质量胜过数量，珍惜真正的友谊，建立有意义的连接。</p>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <div class="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                <div class="flex items-center mb-4">
+                                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                        <span class="text-green-600 text-sm font-medium">5</span>
+                                    </span>
+                                    <h4 class="text-lg font-semibold text-gray-900">活在当下</h4>
+                                </div>
+                                <p class="text-gray-700 pl-12">过去已逝，未来未至，当下才是真实。珍惜此刻，享受生活。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-white py-16 sm:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">关于纳瓦尔·拉维坎特</h2>
+            </div>
+            <div class="mt-10 prose prose-lg text-gray-700 mx-auto text-justify">
+                <p>纳瓦尔·拉维坎特 (Naval Ravikant) 是一位印度裔美国企业家和投资者。他是 AngelList 的联合创始人、前任首席执行官。他早期投资了超过200家公司，包括 Uber、FourSquare、Twitter、Wish.com、Poshmark、Postmates、Thumbtack、Notion、SnapLogic、Opendoor、Clubhouse、Stack Overflow、Bolt、OpenDNS、Yammer 和 Clearview AI，成功退出了70多家，并有超过10家独角兽公司。</p>
+                <p>纳瓦尔以其关于财富创造、幸福感和人生哲学的深刻见解而闻名，并通过播客、推文和访谈分享他的智慧。他的思想影响了全球数百万追求个人成长和财务自由的人们。</p>
+                <p class="text-center mt-8">
+                    <a href="https://nav.al/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-semibold">访问 Naval.al</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer border-t border-gray-200">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm text-gray-600">
+                &copy; <span id="currentYear"></span> 纳瓦尔智慧精选。灵感源自苹果设计。
+            </p>
+            <p class="mt-2 text-xs text-gray-500">
+                所有名言归属于纳瓦尔·拉维坎特。
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = mobileMenuButton.querySelector('svg:first-child');
+        const iconClose = mobileMenuButton.querySelector('svg:last-child');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+            mobileMenuButton.setAttribute('aria-expanded', !expanded);
+            mobileMenu.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open after clicking a link
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenuButton.click();
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
